@@ -11,9 +11,12 @@ In the meantime, I had gotten better at HomeAssistant, and had started tinkering
 This is my new plan. I will try to control the tv-lift using ESPHome.
 
 ## Requirements for the ESPHome based solution
-1. Will use ESPHome and an  ESP32 NodeMCU board
-2. Board must attach to the tv-lift in paralell with the remote.
-3. Attachment of board must be non-destructive and possible to remove at a later stage.
+1. Will use ESPHome and an  ESP32 NodeMCU board.
+2. The remote will not be modified.
+3. Board must attach to the tv-lift in paralell with the remote.
+4. Attachment of board must be non-destructive and possible to remove at a later stage.
 
 ## Writeup of this project
+Details about the tv-lift, both usermanuals and my reverse engineering steps, can be found in [TV-lift](./TV-lift/)./TV-Lift
 
+If you want to jump directly to the solution, go to [Solution](./Solution)
