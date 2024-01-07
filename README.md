@@ -18,6 +18,6 @@ This is my new plan. I will try to control the tv-lift using ESPHome.
 4. Attachment of board must be non-destructive and possible to remove at a later stage.
 
 ## Writeup of this project
-Details about the tv-lift, both usermanuals and my reverse engineering steps, can be found in [TV-lift](./TV-lift/)./TV-Lift
+Details about the tv-lift, both usermanuals and my reverse engineering steps, can be found in [TV-lift](./TV-lift/)
 
 If you want to jump directly to the solution, go to [Solution](./Solution)
