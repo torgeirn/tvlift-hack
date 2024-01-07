@@ -1,8 +1,8 @@
-#Solution
+# Solution
 
-##TV-Lift modifications
+## TV-Lift modifications
 
-##ESPHome Configuration
+## ESPHome Configuration
 
-##HomeAssistant configuration
+## HomeAssistant configuration
 
