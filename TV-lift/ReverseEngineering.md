@@ -14,3 +14,23 @@ The chip on the board is a Beken BK2461. And Google tels me this might be a l24y
 
 
 ## TV-Lift
+The linear actuator the actually lifts the tv is mounted into the end of my bed. Since this is quite a task to remove, I have only removed the power brick and the control unit. The power brick looks fairly standard except the output voltage at 29V. There is no need to disassemble the power brick since it will not be modified.
+
+Disassembly of the Control unit was just four screws, and the box came apart easily.
+The circuit board inside looks quite simple:
+![Control unit circuit board](../Images/ControlUnit4.jpg)
+
+First step was to find a source for 5V where I can power the ESP32 board from.
+There are a few point labeled 5V and GND on the board. I decided that the points next to the buzzer(B1) and capacitor C1 is a good source since this is powered as soon as the power is connected to the control unit.
+
+Next step is to see if I can recognize the remote control commands on the outputs of the receiver module(RX).
+According to the datasheet for the transmitter/receiver modules ([Datasheet](./L24YK_Datasheet.pdf)), it looks like an input on the transmitter module will activate the corresponding output on the receiver module for pins B1-B6. 
+Pin B1 is pin number 2 from the top when looking at the previous picute of the control board.
+
+Pins to function mapping:
+-B1: "1"
+-B2: "Down/Left"
+-B3: "Up/Right"
+-B4: ""
+-B5: ""
+-B6: ""
