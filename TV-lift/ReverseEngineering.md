@@ -8,7 +8,9 @@ It looks like this kind of tv-lift is fairly generic, and is sold under many dif
 
 ## Remote Control
 The remote is easy to take apart, and is how i dicovered that my RF-bridge was working with a different kind of RF.
-
+There isnt much going on. Just buttons going back to the small transmitter board.
+The chip on the board is a Beken BK2461. And Google tels me this might be a l24yk 2.4GHz 6-channel Wireless Transmitter module.
+![Remote Control Transmitter](../Images/Remote%204.jpg)
 
 
 ## TV-Lift
