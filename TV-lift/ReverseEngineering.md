@@ -14,7 +14,7 @@ The chip on the board is a Beken BK2461. And Google tels me this might be a l24y
 
 
 ## TV-Lift
-The linear actuator the actually lifts the tv is mounted into the end of my bed. Since this is quite a task to remove, I have only removed the power brick and the control unit. The power brick looks fairly standard except the output voltage at 29V. There is no need to disassemble the power brick since it will not be modified.
+The linear actuator that actually lifts the tv is mounted into the end of my bed. Since this is quite a task to remove, I have only removed the power brick and the control unit. The power brick looks fairly standard except the output voltage at 29V. There is no need to disassemble the power brick since it will not be modified.
 
 Disassembly of the Control unit was just four screws, and the box came apart easily.
 The circuit board inside looks quite simple:
@@ -28,6 +28,17 @@ According to the datasheet for the transmitter/receiver modules ([Datasheet](./L
 Pin B1 is pin number 2 from the top when looking at the previous picute of the control board.
 
 Pins to function mapping:
+
+|Pin/Button|1|2|1Mem|2Mem|Up|Down|OK|
+| ------ | ------ | ------ | ------ | ------ | ----- | ------ | ------ |
+|B1|NA|NA|NA|NA|NA|NA|NA|
+|B2|NA|NA|NA|NA|NA|NA|NA|
+|B3|NA|NA|NA|NA|NA|NA|NA|
+|B4|NA|NA|NA|NA|NA|NA|NA|
+|B5|NA|NA|NA|NA|NA|NA|NA|
+|B6|NA|NA|NA|NA|NA|NA|NA|
+
+
 -B1: "1"
 -B2: "Down/Left"
 -B3: "Up/Right"
