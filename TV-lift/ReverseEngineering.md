@@ -27,21 +27,21 @@ Next step is to see if I can recognize the remote control commands on the output
 According to the datasheet for the transmitter/receiver modules ([Datasheet](./L24YK_Datasheet.pdf)), it looks like an input on the transmitter module will activate the corresponding output on the receiver module for pins B1-B6. 
 Pin B1 is pin number 2 from the top when looking at the previous picute of the control board.
 
+I measured the voltage between GND and B1-B6 while pressing each button on the remote. I made notes of the active pins for each button, and put them into a table. The table seemed very random until i arranged the collums by the button numbers printed on the circuit board of the remote.
+
 Pins to remote control button mapping:
 
-|Pin/Button|1|2|1Mem|2Mem|Up|Down|OK|
-| ------ | ------ | ------ | ------ | ------ | ----- | ------ | ------ |
-|B1|NA|NA|NA|NA|NA|NA|NA|
-|B2|NA|NA|NA|NA|NA|NA|NA|
-|B3|NA|NA|NA|NA|NA|NA|NA|
-|B4|NA|NA|NA|NA|NA|NA|NA|
-|B5|NA|NA|NA|NA|NA|NA|NA|
-|B6|NA|NA|NA|NA|NA|NA|NA|
+|Pin/Button|1 (K1)| Left (K2)|Down(K3)|OK (K4)|Up(K5)|Right (K6)|1Mem (K7)|2 (K8)|2Mem(K9)|
+| --- | --- | --- | --- | --- | -- | --- | --- | --- | --- |
+|B1|X |X |NA|NA|NA|NA|NA|NA|NA|
+|B2|NA|X |X |X |NA|NA|NA|NA|NA|
+|B3|NA|NA|NA|X |X |X |NA|NA|NA|
+|B4|NA|NA|NA|NA|NA|X |X |X |NA|
+|B5|NA|NA|NA|NA|NA|NA|NA|X |X |
+|B6|NA|NA|NA|NA|NA|NA|NA|NA|NA|
+|B6|NA|NA|NA|NA|NA|NA|NA|NA|NA|
 
+- B7 is connected to the button K1 on the control unit for pairing of the remote. Press the button for pairing. Hold the button for >5 sec. to clear paired remotes.
+- B8 is connected to VCC to set the receiver to non-latching outputs.
 
--B1: "1"
--B2: "Down/Left"
--B3: "Up/Right"
--B4: ""
--B5: ""
--B6: ""
+Now I just need to see if I can replicate the signals on B1-B5 by using an [ESP32](../Solution/Solution.md)
