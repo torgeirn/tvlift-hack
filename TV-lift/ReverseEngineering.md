@@ -27,7 +27,7 @@ Next step is to see if I can recognize the remote control commands on the output
 According to the datasheet for the transmitter/receiver modules ([Datasheet](./L24YK_Datasheet.pdf)), it looks like an input on the transmitter module will activate the corresponding output on the receiver module for pins B1-B6. 
 Pin B1 is pin number 2 from the top when looking at the previous picute of the control board.
 
-Pins to function mapping:
+Pins to remote control button mapping:
 
 |Pin/Button|1|2|1Mem|2Mem|Up|Down|OK|
 | ------ | ------ | ------ | ------ | ------ | ----- | ------ | ------ |
