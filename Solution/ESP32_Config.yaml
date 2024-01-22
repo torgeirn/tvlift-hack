@@ -1,0 +1,126 @@
+#This code is for setting up the relevant GPIO, and defining the needed switches for HomeAssistant.
+#The code can be pasted to your ESP32 device through the "Edit" interface in HomeAssistant.
+#The code shuld be inserted after the code that is made during setup of the ESP32 device.
+###################################
+#GPIO setup and aliasing
+output:
+  - platform: gpio
+    id: b1
+    pin: GPIO13
+    inverted: false
+  - platform: gpio
+    id: b2
+    pin: GPIO12
+    inverted: false
+  - platform: gpio
+    id: b3
+    pin: GPIO14
+    inverted: false
+  - platform: gpio
+    id: b4
+    pin: GPIO27
+    inverted: false
+  - platform: gpio
+    id: b5
+    pin: GPIO26
+    inverted: false
+
+#Switch functions
+switch:
+  - platform: template #Position 1 button (K1)
+    name: "Possisjon 1"
+    id: pos1_switch
+    turn_on_action:
+      - output.turn_on: b1
+      - delay: 500ms
+      - switch.turn_off: pos1_switch
+    turn_off_action:
+      - output.turn_off: b1  
+
+  - platform: template #Left button (K2)
+    name: "Venstre"
+    id: left_switch
+    turn_on_action:
+      - output.turn_on: b1
+      - output.turn_on: b2
+      - delay: 500ms
+      - switch.turn_off: left_switch
+    turn_off_action:
+      - output.turn_off: b1
+      - output.turn_off: b2
+
+  - platform: template #Down button (K3)
+    name: "Ned"
+    id: down_switch
+    turn_on_action:
+      - output.turn_on: b2
+      - delay: 500ms
+      - switch.turn_off: down_switch
+    turn_off_action:
+      - output.turn_off: b2
+
+  - platform: template #OK button (K4)
+    name: "OK"
+    id: ok_switch
+    turn_on_action:
+      - output.turn_on: b2
+      - output.turn_on: b3
+      - delay: 500ms
+      - switch.turn_off: ok_switch
+    turn_off_action:
+      - output.turn_off: b2
+      - output.turn_off: b3 
+
+  - platform: template #Up button (K5)
+    name: "Opp"
+    id: up_switch
+    turn_on_action:
+      - output.turn_on: b3
+      - delay: 500ms
+      - switch.turn_off: up_switch
+    turn_off_action:
+      - output.turn_off: b3
+
+  - platform: template #Right button (K6)
+    name: "Right"
+    id: right_switch
+    turn_on_action:
+      - output.turn_on: b3
+      - output.turn_on: b4
+      - delay: 500ms
+      - switch.turn_off: right_switch
+    turn_off_action:
+      - output.turn_off: b3
+      - output.turn_off: b4 
+
+  - platform: template #Mem1 button (K7)
+    name: "Mem 1"
+    id: mem1_switch
+    turn_on_action:
+      - output.turn_on: b4
+      - delay: 500ms
+      - switch.turn_off: mem1_switch
+    turn_off_action:
+      - output.turn_off: b4 
+
+  - platform: template #Position 2 button (K8)
+    name: "Posisjon 2"
+    id: pos2_switch
+    turn_on_action:
+      - output.turn_on: b4
+      - output.turn_on: b5
+      - delay: 500ms
+      - switch.turn_off: pos2_switch
+    turn_off_action:
+      - output.turn_off: b4
+      - output.turn_off: b5 
+
+  - platform: template #Mem2 button (K9)
+    name: "Mem 2"
+    id: mem2_switch
+    turn_on_action:
+      - output.turn_on: b5
+      - delay: 500ms
+      - switch.turn_off: mem2_switch
+    turn_off_action:
+      - output.turn_off: b5

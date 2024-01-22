@@ -25,13 +25,13 @@ There are a few point labeled 5V and GND on the board. I decided that the points
 
 Next step is to see if I can recognize the remote control commands on the outputs of the receiver module(RX).
 According to the datasheet for the transmitter/receiver modules ([Datasheet](./L24YK_Datasheet.pdf)), it looks like an input on the transmitter module will activate the corresponding output on the receiver module for pins B1-B6. 
-Pin B1 is pin number 2 from the top when looking at the previous picute of the control board.
+Pin B1 is pin number 2 from the top when looking at the previous picture of the control board.
 
 I measured the voltage between GND and B1-B6 while pressing each button on the remote. I made notes of the active pins for each button, and put them into a table. The table seemed very random until i arranged the collums by the button numbers printed on the circuit board of the remote.
 
 Pins to remote control button mapping:
 
-|Pin/Button|1 (K1)| Left (K2)|Down(K3)|OK (K4)|Up(K5)|Right (K6)|1Mem (K7)|2 (K8)|2Mem(K9)|
+|Pin/Button|1 (K1)| Left (K2)|Down (K3)|OK (K4)|Up (K5)|Right (K6)|1Mem (K7)|2 (K8)|2Mem (K9)|
 | --- | --- | --- | --- | --- | -- | --- | --- | --- | --- |
 |B1|X |X |NA|NA|NA|NA|NA|NA|NA|
 |B2|NA|X |X |X |NA|NA|NA|NA|NA|
