@@ -26,7 +26,7 @@ To adapt this to your needs, the GPIO pin numbers may need to be adjusted.
 ## TV-Lift modifications
 Once I was happy with the testing done on the breadboard, i soldered the ESP32 module on to the control unit using jumper wires i attached to the solderpads of the receiver module.
 The other end was soldered to the correct pin on the ESP32 board.
-For convenience i selected the following pins and connected them to the receiver module:
+For convenience i selected the following pins and connected them to the receiver module:  
 GPIO13 -- B1  
 GPIO12 -- B2  
 GPIO14 -- B3  
